@@ -67,7 +67,7 @@ public class LinkedList {
   public void remove(int i) {
     size--;
     if (i == 0) {
-      if (size == 1)
+      if (size == 0)
         head = null;
       else
         head = head.getNext();
@@ -85,7 +85,7 @@ public class LinkedList {
   public void remove(Object o) throws ObjetoNaoEncontradoException {
     for (int i = 0; i < size; i++) {
       if (o == getData(i)) {
-          remove(i);
+        remove(i);
         return;
       }
     }
@@ -125,7 +125,7 @@ public class LinkedList {
       else
         pointer = pointer.getNext();
     }
-      return pointer;
+    return pointer;
   }
 
   public Object getData(int index) {
